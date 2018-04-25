@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Ng4LoadingSpinnerModule, Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 // provider
 import { UsersService } from '../../../providers/users.service';
 
@@ -14,19 +13,14 @@ export class UserListComponent implements OnInit {
 
   constructor(
     private userService: UsersService,
-    private ng4LoadingSpinnerService: Ng4LoadingSpinnerService
+    
   ) { }
 
   ngOnInit() {
     this.loadAllUsers();
   }
 
-  startLoadingSpinner() {
-    this.ng4LoadingSpinnerService.show();
-    setTimeout(function() {
-      this.ng4LoadingSpinnerService.hide();
-    }.bind(this), 4000);
-  }
+ 
 
   private loadAllUsers() {
     this.userService.getUsersList()
