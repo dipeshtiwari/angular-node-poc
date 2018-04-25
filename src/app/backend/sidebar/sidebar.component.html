@@ -1,0 +1,14 @@
+<ul class="nav-list">
+    <li>
+        <a routerLink="/admin/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    </li>
+    <li>
+        <a routerLink="/admin/users" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Users</a>
+    </li>
+    <li>
+        <a routerLink="/admin/blog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Blog</a>
+    </li>
+    <li>
+        <a (click)="logout()" routerLinkActive="active">Logout</a>
+    </li>
+</ul>

@@ -1,0 +1,20 @@
+<div class="layout-overflow">
+    <div class="layout-canvas" [ngClass]="{'nav-open': navOpen, 'nav-closed': !navOpen}" [style.min-height]="minHeight">
+
+        <!-- HEADER -->
+        <app-admin-header (navToggled)="navToggledHandler($event)"></app-admin-header>
+
+        <div class="col-3" style="float:left">
+            <app-admin-sidebar></app-admin-sidebar>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="col-9" style="float:left">
+            <router-outlet></router-outlet>
+        </div>
+
+        <!-- FOOTER -->
+        <app-admin-footer></app-admin-footer>
+
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>{{blogHeading}}</h1>
+
+<div *ngIf="blogList">
+  <div *ngFor="let blog of blogList">
+    <h4>{{blog.title}}</h4>
+    <p>{{blog.description}}</p>
+  </div>
+</div>
